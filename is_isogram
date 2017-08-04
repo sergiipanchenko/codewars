@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+
+# Created on 2017-08-04 10:19
+# @author Sergii Panchenko
+
+# An isogram is a word that has no repeating letters, consecutive 
+# or non-consecutive.
+# Implement a function that determines whether a string that contains only 
+# letters is an isogram. 
+# Assume the empty string is an isogram. Ignore letter case.
+
+def is_isogram(string):
+    #your code here
+    chars = list(string.lower())
+    charsUnique = set(chars)
+    
+    if len(chars) == len(charsUnique):
+        return True
+    else:
+        return False
+    
+
+#testCase:
+print(is_isogram("Dermatoglyphics" ))   #True
+print(is_isogram("aba" ))               #False
+print(is_isogram("moOse" ))             #False -- ignore letter case
+
+# Time: 148ms Passed: 50 Failed: 0
