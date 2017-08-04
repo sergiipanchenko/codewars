@@ -27,8 +27,8 @@ def openOrSenior(data):
     # Hmmm.. Where to start?
     members = []
     
-    for d in data:
-        if d[0] >= 55 and d[1] > 7:
+    for age, handicap in data:
+        if age >= 55 and handicap > 7:
             members.append('Senior')
         else:
             members.append('Open')
