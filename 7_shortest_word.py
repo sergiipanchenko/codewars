@@ -1,16 +1,21 @@
 import unittest
 
 
-# Time: 761ms Passed: 45 Failed: 0
+# best practice
 def find_short(s):
-    words = s.split()
-    shortest = len(words[0])
-    
-    for word in words:
-        if len(word) < shortest:
-            shortest = len(word)
-    
-    return shortest
+    return min(len(word) for word in s.split())
+
+
+# Time: 761ms Passed: 45 Failed: 0
+# def find_short(s):
+#     words = s.split()
+#     shortest = len(words[0])
+#
+#     for word in words:
+#         if len(word) < shortest:
+#             shortest = len(word)
+#
+#     return shortest
 
 
 class Tests(unittest.TestCase):
