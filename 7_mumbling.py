@@ -12,6 +12,11 @@ def accum(s):
     return '-'.join(mumbling)
 
 
+# best practice
+# def accum(s):
+#     return '-'.join(c.upper()+c.lower()*i for i,c in enumerate(s))
+
+
 class Tests(unittest.TestCase):
     def test_accum(self):
         self.assertEqual(accum('abcd'), 'A-Bb-Ccc-Dddd')
