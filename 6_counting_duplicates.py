@@ -20,6 +20,7 @@ def duplicate_count(text):
     return counter
 
 
+
 class Tests(unittest.TestCase):
     def test_accum(self):
         self.assertEqual(duplicate_count('abcde'), 0)
