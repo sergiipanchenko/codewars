@@ -2,10 +2,13 @@ import unittest
 
 
 # Time: 797ms Passed: 108 Failed: 0
+# def make_readable(seconds):
+#     mins, secs = divmod(seconds, 60)
+#     hours, mins = divmod(mins, 60)
+#     return str(hours).rjust(2, '0')+':'+str(mins).rjust(2, '0')+':'+str(secs).rjust(2, '0')
+
 def make_readable(seconds):
-    mins, secs = divmod(seconds, 60)
-    hours, mins = divmod(mins, 60)
-    return str(hours).rjust(2, '0')+':'+str(mins).rjust(2, '0')+':'+str(secs).rjust(2, '0')
+    return '{:02}:{:02}:{:02}'.format(int(seconds/3600), int(seconds/60%60), int(seconds%60))
 
 
 class Tests(unittest.TestCase):
