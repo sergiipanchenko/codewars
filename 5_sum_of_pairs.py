@@ -1,16 +1,27 @@
 import unittest
 
 
-def sum_pairs(ints, s):
-    check_dict = {}
+# Time: 6349ms Passed: 12 Failed: 0
+# def sum_pairs(ints, s):
+#     check_dict = {}
+#
+#     for num in ints:
+#         remainder = s - num
+#
+#         if remainder in check_dict:
+#             return [remainder, num]
+#
+#         check_dict[num] = num
 
-    for num in ints:
-        remainder = s - num
 
-        if remainder in check_dict:
-            return [remainder, num]
+# Time: 6926ms Passed: 12 Failed: 0
+def sum_pairs(ints_lst, target):
+    seen = set()
 
-        check_dict[num] = num
+    for num in ints_lst:
+        if target - num in seen:
+            return [target - num, num]
+        seen.add(num)
 
 
 class Tests(unittest.TestCase):
